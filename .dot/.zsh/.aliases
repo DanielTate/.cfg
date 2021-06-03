@@ -1,0 +1,54 @@
+
+alias open='nautilus . & disown'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+alias python3='/user/bin/python3'
+
+function zshrc { vi ~/.zshrc }
+function zsha { vi ~/.dot/.zsh/.zsh-aliases }
+
+function gbc {
+	git branch $1 && git checkout $1
+}
+
+function gcon {
+	git diff --name-only --diff-filter=U
+}
+
+function php {
+	/usr/bin/php$@
+}
+
+function gmail {
+	brave-browser mail.google.com
+}
+
+function google {
+	brave-browser "google.com/search?q=$@"
+}
+
+function font {
+	brave-browser "google.com/search?q=index of: parent directory $@"
+}
+
+function cd {
+    builtin cd "$@"
+	if test -f ".cd"; then
+		source ".cd"
+	fi
+}
+
+# - nginx
+# Add to nginx available / enabled ( current dir or passed dir ) 
+# Add to var www same name as nginx config
+# 
+# - database
+# create database with name passed
+# import database
+#
+# - SS
+# export database
+# zip assets
+# zip outputs
+# send somewhere
+# 

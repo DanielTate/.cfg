@@ -1,0 +1,82 @@
+# espanso configuration file
+
+# This is the default configuration file, change it as you like it
+# You can refer to the official documentation:
+# https://espanso.org/docs/
+
+fast_inject: true
+backspace_delay: 10
+inject_delay: 10
+backend: Clipboard
+
+# Matches are the substitution rules, when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: "!title"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: random
+        params:
+          choices:
+            - "Lorem ipsum dolor"
+            - "Donec non auctor"
+            - "Quisque a felis dolor"
+
+  - trigger: "!headline"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: random
+        params:
+          choices:
+            - " Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            - " Donec non auctor magna, at venenatis quam"
+            - " Vestibulum semper leo eu augue imperdiet fermentum"
+
+  - trigger: "!sentence"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: random
+        params:
+          choices:
+            - " Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+            - " Donec non auctor magna, at venenatis quam. "
+            - " Vestibulum semper leo eu augue imperdiet fermentum. "
+            - " Vestibulum semper leo eu augue imperdiet fermentum. "
+            - " Fusce ultrices massa justo, ac sagittis augue aliquam at. "
+            - " Nunc consectetur tincidunt ante, vitae gravida nisl aliquam consectetur. "
+            - " Nam et aliquet metus. Phasellus sed tellus ut erat mollis mollis. "
+
+  - trigger: "!paragraph"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: random
+        params:
+          choices:
+            - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices massa justo, ac sagittis augue aliquam at. Nunc consectetur tincidunt ante, vitae gravida nisl aliquam consectetur. Integer sit amet tortor mi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras sem ante, pulvinar non ligula id, mattis lacinia risus. Vestibulum auctor metus non vestibulum aliquet. Nullam condimentum elementum maximus. "
+            - "Donec non auctor magna, at venenatis quam. Nunc lobortis lacus sit amet lectus vestibulum luctus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque a velit ligula. Fusce quis arcu efficitur, congue magna id, hendrerit tellus. Fusce in dolor eu lectus luctus condimentum. Vivamus vel porta est. Praesent consectetur ex efficitur est elementum laoreet. Praesent placerat mi id odio lobortis, scelerisque mollis sem dictum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In maximus, tellus sit amet posuere sodales, turpis dui congue magna, eget tempor lacus justo quis tortor. Fusce in nisi et nibh ultricies malesuada a non erat. "
+            - "Quisque a felis dolor. Vestibulum semper leo eu augue imperdiet fermentum. Mauris venenatis magna in ex laoreet, quis laoreet dolor tempor. Donec aliquam ultricies turpis sed vulputate. Aliquam malesuada enim nec dignissim molestie. Etiam consectetur scelerisque mi sed elementum. Nulla facilisi. Donec elementum arcu mi, sodales molestie orci tincidunt eu."
+            - "Nam elementum interdum ligula sit amet congue. Praesent quis libero sit amet velit pharetra pellentesque. Vivamus efficitur tincidunt elementum. Aenean sit amet fringilla nulla. Duis libero risus, consectetur sit amet massa nec, porta laoreet felis. Nulla semper a eros commodo dapibus. Cras quam enim, suscipit et nunc at, fermentum fermentum velit. Nulla facilisi. In eu erat elit. Nulla porta eros ut ex posuere, vel blandit ligula molestie. Mauris pellentesque eros consectetur, ornare dui quis, tincidunt urna. Nunc dignissim tempor urna. Vivamus volutpat vulputate viverra. Nam et aliquet metus. Phasellus sed tellus ut erat mollis mollis."
+            - "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Etiam ac dolor mollis, finibus velit ut, dapibus risus. Proin sodales cursus nisi, et pretium nisi. Duis euismod sagittis tortor, in bibendum sem convallis eu. Vestibulum tortor orci, ultrices vehicula fringilla eget, convallis eget urna. Suspendisse potenti. Morbi auctor magna vel lectus pulvinar congue. Fusce a suscipit nibh. Aliquam quis pulvinar velit. Aenean blandit volutpat ante, at tempus sapien. Curabitur posuere, purus a malesuada pulvinar, lectus neque lacinia augue, in cursus ex neque in libero. Vestibulum id arcu rutrum, viverra leo nec, semper neque. Praesent sit amet sollicitudin augue, id tempus sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+
+  # Dates
+  - trigger: "!date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%d/%m/%Y"
+
+  # Shell commands
+  - trigger: "!shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo Hello from your shell"

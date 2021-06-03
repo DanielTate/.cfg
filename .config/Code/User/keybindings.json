@@ -1,0 +1,15 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+shift+m",
+        "command": "workbench.action.toggleMaximizedPanel"
+    },
+    {
+        "key": "ctrl+shift+,",
+        "command": "workbench.action.closePanel"
+    },
+    {
+        "key": "ctrl+shift+up",
+        "command": "workbench.files.action.collapseExplorerFolders"
+    }
+]
