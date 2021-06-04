@@ -19,4 +19,4 @@ Install dependancies
 ```
 
 @TODO
-Add other steps to get everythign running correctly.
+- Add other steps to get everythign running correctly.
