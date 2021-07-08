@@ -4,7 +4,7 @@
     "editor.minimap.enabled": false,
     "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
     "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
-    "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+    "terminal.integrated.fontFamily": "monospace",
     "window.menuBarVisibility": "toggle",
     "todo-tree.tree.showScanModeButton": false,
     "editor.folding": false,
@@ -14,7 +14,7 @@
         100
     ],
     "editor.tabSize": 4,
-    "editor.fontFamily": "'Fira Code Retina' ,'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'Hack' ,'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
     "vetur.format.options.tabSize": 4,
     "html.format.indentInnerHtml": true,
@@ -52,5 +52,14 @@
     "editor.quickSuggestions": false,
     "editor.snippetSuggestions": "none",
     "editor.suggest.showFolders": false,
-    "editor.suggest.showStatusBar": true
+    "editor.suggest.showStatusBar": true,
+    "eslint": {
+        "rules": {
+            "indent": ["error", 4]
+        },
+        "codeAction.showDocumentation": {
+            "enable": true
+        }
+    },
+    "editor.detectIndentation": false
 }

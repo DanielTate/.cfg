@@ -16,7 +16,12 @@ function gcon {
 }
 
 function php {
-	/usr/bin/php$@
+	if [ $# -eq 0 ]; then
+		echo "Using php8.0"
+		/usr/bin/php8.0
+	else
+		/usr/bin/php$@
+	fi
 }
 
 function gmail {

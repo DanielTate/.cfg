@@ -8,6 +8,7 @@ fast_inject: true
 backspace_delay: 10
 inject_delay: 10
 backend: Clipboard
+# backend: Auto 
 
 # Matches are the substitution rules, when you type the "trigger" string
 # it gets replaced by the "replace" string.
@@ -80,3 +81,11 @@ matches:
         type: shell
         params:
           cmd: "echo Hello from your shell"
+
+  - trigger: "!name"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell 
+        params:
+          cmd: 'faker --names firstName'
